@@ -1,0 +1,22 @@
+html 
+    include partials/head
+    body 
+        div
+            h2 Developed By
+        div
+            ul
+                for developer in showdata.developedBy 
+                    li= developer
+        div
+            h2 Starring
+        div
+            ul
+                for star in showdata.starring 
+                    li= star
+        div
+            h2 Seasons
+        div
+            ul
+                for season in showdata.seasons
+                    li 
+                        a(href= `/seasons/${season.number}`)=`season ${season.number}`
