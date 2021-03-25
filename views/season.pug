@@ -1,0 +1,16 @@
+html 
+    include partials/head
+    body 
+        h2.seasonHeader=`Season ${season.number}`
+        table 
+            tr 
+                th.number No.
+                th.title Title 
+                th.director Director 
+            for episode in season.episodes
+                tr 
+                    td.center= episode.number
+                    td= episode.title 
+                    td= episode.director 
+                tr 
+                    td(colspan=3)= episode.synopsis
